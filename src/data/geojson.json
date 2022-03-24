@@ -1,0 +1,131 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "message": "Hochzeit im Apfelgarten des Schusterhofs",
+                "iconSize": [60, 60],
+                "icon": "/assets/images/wedding.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.579395536570564, 47.8112623401543]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "message": "Parkplatz beim Friedhof",
+                "iconSize": [40, 40],
+                "icon": "/assets/images/parking.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.575111670376044, 47.80810911830712]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "message": "Vroni's Elternhaus\nSonnenweg 3",
+                "iconSize": [40, 40],
+                "icon": "/assets/images/parents.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.594249634952352, 47.806196817578325]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "Accomodation",
+                "message": "Salzburger Hof",
+                "url": "https://hotelsalzburgerhof.de",
+                "phone": "+49 8662 48840",
+                "iconSize": [40, 40],
+                "icon": "/assets/images/bed.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.59106082708855, 47.80419556680706]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "Accomodation",
+                "message": "Alpin-Gästehaus",
+                "url": "https://alpin-gaestehaus.de",
+                "phone": "+49 8662 8397",
+                "iconSize": [40, 40],
+                "icon": "/assets/images/bed.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.591496113482362, 47.80998765763203]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "Accomodation",
+                "message": "Hotel Mariandl",
+                "url": "https://hotel-mariandl.de",
+                "phone": "+49 8662 8495",
+                "iconSize": [40, 40],
+                "icon": "/assets/images/bed.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.589717869303932, 47.801027192477896]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "Accomodation",
+                "message": "Gästehaus Gehmacher",
+                "url": "https://beimbauern.de",
+                "phone": "+49 8662 3329",
+                "iconSize": [40, 40],
+                "icon": "/assets/images/bed.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.59523959639717, 47.80457560948969]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "Accomodation",
+                "message": "Gästehaus Sonnenhof",
+                "url": "https://sonnenhof-dangl.de",
+                "phone": "+49 8662 661156",
+                "iconSize": [40, 40],
+                "icon": "/assets/images/bed.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.593819453961373, 47.80443136687273]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "Accomodation",
+                "message": "Gasthof Alpenblick Holzhausen",
+                "url": "https://gasthofalpenblick.de",
+                "phone": "+49 151 16687835",
+                "iconSize": [40, 40],
+                "icon": "/assets/images/bed.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.573725082797829, 47.83065254895307]
+            }
+        }
+    ]
+}

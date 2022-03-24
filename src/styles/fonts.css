@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "GLF";
+  src: url(/assets/fonts/glf.woff2) format("woff2"),
+   url(/assets/fonts/glf.woff) format("woff");
+}
+
+@font-face {
+  font-family: "GLFS";
+  src: url(/assets/fonts/glfs.woff2) format("woff2"),
+   url(/assets/fonts/glfs.woff) format("woff");
+}

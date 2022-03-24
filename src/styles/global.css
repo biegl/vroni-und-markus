@@ -1,0 +1,23 @@
+@tailwind base;
+
+html, body {
+  background: url(/assets/images/bg_brown.png) repeat fixed;
+  font-family: "GLF", sans-serif;
+}
+
+a {
+  @apply text-blue-700;
+}
+
+a:hover {
+  @apply border-b-2 border-blue-700;
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+.highlight-header {
+  font-family: "GLFS", serif;
+  font-size: 4rem;
+}

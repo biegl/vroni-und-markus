@@ -3,6 +3,8 @@ import { Main } from '@/templates/Main';
 import Header from '@/components/Header';
 import Map from '@/components/Map';
 import geojson from '../data/geojson.json';
+import footer from '../../public/assets/images/footer.jpg';
+import Image from 'next/image';
 
 const accomodations = geojson.features
     .filter((data) => data.properties.type == 'Accomodation')
@@ -21,58 +23,118 @@ const Index = () => {
             <div className="mx-auto max-w-screen-md position-fixed">
                 <Header />
             </div>
-            <div className="bg-white p-5">
+            <div className="bg-white p-5 section">
                 <div className="mx-auto max-w-screen-md">
                     <h2>Ablauf</h2>
                     <ol>
-                        <li>13:30 - Freie Trauung am Schellenberg</li>
+                        <li>
+                            13:30 - Freie Trauung am Schellenberg hinterm
+                            Schusterhof
+                        </li>
                         <li>15:00 - Kaffee und Kuchen</li>
                         <li>18:30 - Abendessen</li>
                     </ol>
-                    <h2>Location</h2>
                 </div>
             </div>
             <Map />
             <div className="bg-white p-5">
                 <div className="mx-auto max-w-screen-md">
-                    Die Freie Trauung findet im Apfelbaumgarten hinterm
-                    Schusterhof statt.
-                    <h3>Parkplatz in der Nähe</h3>
-                    <h3>Unterkünfte</h3>
-                    <p>
-                        Da das Chiemgau zu dieser Zeit sehr gefragt ist, ist es
-                        leider nicht möglich alle Gäste an einem Ort
-                        unterzubringen. Wir bitten euch deshalb selbst für eine
-                        Unterkunft zu sorgen. Anbei haben wir eine
-                        Hotels/Pensionen in unmittelbarer Nähe.
-                    </p>
-                    Übernachtungsmöglichkeiten in Bergen:
-                    <ul>
-                        {accomodations &&
-                            accomodations.map((acc) => (
-                                <li key={acc.message}>
-                                    <div>
-                                        <div>{acc.message}</div>
+                    <div className="my-5">
+                        <h2 className="flex-header">
+                            <img
+                                src="/assets/images/wedding.png"
+                                className="icon-header mr-3"
+                            />{' '}
+                            Location
+                        </h2>
+                        <p>Adresse: Schellenbergstraße 3, 83346 Bergen</p>
+                    </div>
+                    <div className="my-5">
+                        <h2 className="flex-header">
+                            <img
+                                src="/assets/images/parking.png"
+                                className="icon-header mr-3"
+                            />{' '}
+                            Parkplatz in der Nähe
+                        </h2>
+                        <p>
+                            Da beim Schusterhof der Parkplatz begrenzt ist,
+                            bitten wir euch, die Autos unten beim Friedhof
+                            stehen zu lassen und die letzten Meter zu Fuß hinauf
+                            zu gehen.
+                            <br />
+                            <br />
+                            Adresse: Achenweg 31, 83346 Bergen, Germany
+                        </p>
+                    </div>
+                    <div className="my-5">
+                        <h2 className="flex-header">
+                            <img
+                                src="/assets/images/bed.png"
+                                className="icon-header mr-3"
+                            />{' '}
+                            Unterkünfte
+                        </h2>
+                        <p>
+                            Da das Chiemgau zu dieser Zeit sehr gefragt ist, ist
+                            es leider nicht möglich alle Gäste an einem Ort
+                            unterzubringen. Wir bitten euch deshalb selbst für
+                            eine Unterkunft zu sorgen. Anbei haben wir eine
+                            Hotels/Pensionen in unmittelbarer Nähe.
+                        </p>
+                        Übernachtungsmöglichkeiten in Bergen:
+                        <ul
+                            className="grid grid-cols-2 gap-4"
+                            style={{ margin: '4rem 0' }}
+                        >
+                            {accomodations &&
+                                accomodations.map((acc) => (
+                                    <li key={acc.message} className="ml-5">
                                         <div>
-                                            <a href={acc.url}>{acc.url}</a>
+                                            <div>{acc.message}</div>
+                                            <div>
+                                                <a href={acc.url}>{acc.url}</a>
+                                            </div>
+                                            <div>
+                                                <a href={'tel:' + acc.phone}>
+                                                    {acc.phone}
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <a href={'tel:' + acc.phone}>
-                                                {acc.phone}
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                            ))}
-                    </ul>
-                    <h2>RSVP</h2>
-                    <p>
-                        Bitte gebt uns rechtzeitig bis zum 01.07.2022 Bescheid
-                        ob ihr diesen Tag mit uns feiern könnt. Wir freuen uns
-                        auf euch!
-                    </p>
+                                    </li>
+                                ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <div>
+                <div className="mx-auto max-w-screen-md section">
+                    <div>
+                        <h2>Fotos</h2>
+                        <p>Gibt's dann nach der Hochzeit! ;)</p>
+                    </div>
+                </div>
+            </div>
+            <footer className="page-footer grid grid-cols-2">
+                <div className="page-footer-image bg-white">
+                    <img
+                        src="/assets/images/footer.jpg"
+                        style={{ height: '100%' }}
+                    />
+                </div>
+                <div className="mx-auto max-w-screen-md bg-white p-5">
+                    <div>
+                        <strong className="gold header-alt">
+                            Meldet's enk
+                        </strong>
+                        <p>
+                            Bitte gebt uns bis zum <strong>01.07.2022</strong>{' '}
+                            Bescheid ob ihr diesen Tag mit uns feiern könnt. Wir
+                            freuen uns auf euch!
+                        </p>
+                    </div>
+                </div>
+            </footer>
         </Main>
     );
 };

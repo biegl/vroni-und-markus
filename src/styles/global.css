@@ -5,6 +5,14 @@ html, body {
   font-family: "GLF", sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "GLFS", serif;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
 a {
   @apply text-blue-700;
 }
@@ -18,6 +26,42 @@ a:hover {
 @tailwind utilities;
 
 .highlight-header {
-  font-family: "GLFS", serif;
   font-size: 4rem;
+}
+
+.flex-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.icon-header {
+  width: 40px;
+  border: 3px solid #b89c6f;
+  border-radius: 50%;
+}
+
+.gold {
+  color: #E5C77B;
+}
+
+.section {
+  min-height: 25rem;
+  display: flex;
+  align-items: center;
+}
+
+.header-alt {
+  font-size: 3rem;
+  display: block;
+  text-align: center;
+}
+
+.page-footer-image {
+  filter: grayscale(1);
+  content: " ";
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: block;
 }

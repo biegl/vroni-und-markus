@@ -30,17 +30,10 @@ const Map = () => {
             const el = document.createElement('div');
             const width = marker.properties.iconSize[0];
             const height = marker.properties.iconSize[1];
-            el.className = 'marker';
-            el.style.backgroundColor = 'white';
-            el.style.backgroundPosition = 'center';
-            el.style.backgroundRepeat = 'no-repeat';
-            el.style.backgroundImage = 'url(' + marker.properties.icon + ')';
-            el.style.borderRadius = '50%';
-            el.style.border = '3px solid #fff';
-            el.style.boxShadow = '0 0 10px rgba(0,0,0,0.25)';
+            el.className = styles.marker;
             el.style.width = `${width}px`;
             el.style.height = `${height}px`;
-            el.style.backgroundSize = '100%';
+            el.style.backgroundImage = 'url(' + marker.properties.icon + ')';
 
             el.addEventListener('click', () => {
                 const { message, url, phone } = marker.properties;

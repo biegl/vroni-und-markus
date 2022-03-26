@@ -64,7 +64,7 @@ const Index = () => {
                             zu gehen.
                             <br />
                             <br />
-                            Adresse: Achenweg 31, 83346 Bergen, Germany
+                            Adresse: Achenweg 31, 83346 Bergen
                         </p>
                     </div>
                     <div className="my-5">
@@ -108,8 +108,8 @@ const Index = () => {
                 </div>
             </div>
             <div>
-                <div className="mx-auto max-w-screen-md section">
-                    <div>
+                <div className="flex h-96 items-center justify-center">
+                    <div className="text-center max-w-screen-md">
                         <h2>Fotos</h2>
                         <p>Gibt's dann nach der Hochzeit! ;)</p>
                     </div>

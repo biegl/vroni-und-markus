@@ -10,14 +10,14 @@ const Main = (props: IMainProps) => (
     {props.meta}
 
     <div>
-
       <div className="content py-5 text-xl">{props.children}</div>
 
       <div className="text-center text-sm pb-3">
         Vroni{' '}
         <span role="img" aria-label="Love">
           ♥
-        </span>{' '}Markus
+        </span>{' '}
+        Markus
       </div>
     </div>
   </div>

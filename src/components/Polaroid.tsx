@@ -5,7 +5,7 @@ type IPolaroidProps = {
   caption?: string;
 };
 
-const loader = ({ src }: any) => {
+const myLoader = ({ src }: any) => {
   return `/${src}`;
 };
 
@@ -13,7 +13,7 @@ const Polaroid = (props: IPolaroidProps) => {
   return (
     <div className="item">
       <div className="polaroid">
-        <Image src={props.src} loader={loader} alt="Polaroid" />
+        <Image src={props.src} loader={myLoader} alt="Polaroid" />
         <div className="caption">{props.caption}</div>
       </div>
     </div>

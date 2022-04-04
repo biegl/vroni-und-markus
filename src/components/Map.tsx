@@ -41,7 +41,7 @@ const Map = () => {
       el.addEventListener('click', () => {
         const { message, url, phone } = marker.properties;
         const text = [message, url, phone].join('\n');
-        window.alert(text);
+        console.log(text);
       });
 
       const coords: any = marker.geometry.coordinates;

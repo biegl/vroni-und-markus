@@ -11,6 +11,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   font-size: 3rem;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
 }
 
 a {
@@ -27,12 +33,13 @@ a:hover {
 
 .highlight-header {
   font-size: 4rem;
+  line-height: 3.5rem;
 }
 
 .flex-header {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .icon-header {
@@ -43,6 +50,14 @@ a:hover {
 
 .gold {
   color: #E5C77B;
+}
+
+.bc-gold {
+  border-color: #E5C77B;
+}
+
+.bg-gold {
+  background-color: #E5C77B;
 }
 
 .section {

@@ -11,12 +11,10 @@
 .caption {
   font-size: 1.8rem;
   text-align: center;
-  line-height: 2em;
+  line-height: 1.9.rem;
 }
 .item {
-  width: 33%;
   display: inline-block;
-  margin-top: 2rem;
   filter: grayscale(100%);
 }
 .item .polaroid:before {

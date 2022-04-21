@@ -6,13 +6,13 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="w-full antialiased text-gray-700">
+  <div className="w-full text-gray-700 antialiased">
     {props.meta}
 
     <div>
-      <div className="py-5 text-xl content">{props.children}</div>
+      <div className="text-xl">{props.children}</div>
 
-      <div className="pb-3 text-sm text-center">
+      <div className="py-3 text-center text-sm">
         Vroni{' '}
         <span role="img" aria-label="Love">
           ♥

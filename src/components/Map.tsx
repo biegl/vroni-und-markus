@@ -125,6 +125,10 @@ const Map = () => {
     setZoom(initialZoom);
   }
 
+  function handleActionSheetClosing() {
+    document.body.style.overflow = 'auto';
+  }
+
   const needsResetButton =
     initialLatitude !== lat || initialLongitude !== lng || initialZoom !== zoom;
 
@@ -145,9 +149,7 @@ const Map = () => {
         touchEnable={false}
         mouseEnable={false}
         sheetTransition="transform 0.3s ease-in-out 0s"
-        onClose={() => {
-          document.body.style.overflow = 'auto';
-        }}
+        onClose={handleActionSheetClosing}
         sheetStyle={{
           display: 'flex',
           justifyContent: 'center',
@@ -156,7 +158,10 @@ const Map = () => {
       >
         <button
           className="absolute right-5 top-3 h-10 w-10 text-center"
-          onClick={actionSheet.current?.close}
+          onClick={() => {
+            actionSheet.current?.close();
+            handleActionSheetClosing();
+          }}
           title="Schließen"
         >
           x

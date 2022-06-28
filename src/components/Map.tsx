@@ -18,11 +18,11 @@ const style = {
 
 const initialZoom =
   typeof window !== 'undefined' && window.document.body.clientWidth > 767
-    ? 14
-    : 13;
+    ? 12
+    : 11;
 
-const initialLongitude = 12.590121360621342;
-const initialLatitude = 47.80701831861277;
+const initialLongitude = 12.704796;
+const initialLatitude = 47.80159352358;
 
 function openMaps(coordinates: any) {
   const isIOS = navigator.userAgent.match(/(iPad|iPhone|iPod)/i);

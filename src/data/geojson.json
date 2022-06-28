@@ -4,34 +4,8 @@
     {
       "type": "Feature",
       "properties": {
-        "message": "Hochzeit im Apfelgarten des Schusterhofs",
-        "url": "http://www.schusterhof.org/urlaub",
-        "phone": "+49 171 1717997",
+        "message": "Vroni's Elternhaus Sonnenweg 3",
         "iconSize": [60, 60],
-        "icon": "/assets/images/wedding.png"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [12.579395536570564, 47.8112623401543]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "message": "Parkplatz beim Friedhof",
-        "iconSize": [40, 40],
-        "icon": "/assets/images/parking.png"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [12.575111670376044, 47.80810911830712]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "message": "Vroni's Elternhaus\nSonnenweg 3",
-        "iconSize": [40, 40],
         "icon": "/assets/images/parents.png"
       },
       "geometry": {
@@ -39,94 +13,132 @@
         "coordinates": [12.594249634952352, 47.806196817578325]
       }
     },
+
     {
       "type": "Feature",
       "properties": {
         "type": "Accomodation",
-        "message": "Salzburger Hof",
-        "url": "https://hotelsalzburgerhof.de",
-        "phone": "+49 8662 48840",
+        "message": "Pension Gimpl - Hammer",
+        "distance": "3 Minuten Fußweg",
+        "url": "https://www.gimpl-pension.de/",
+        "phone": "+49 8662 7314",
         "iconSize": [40, 40],
         "icon": "/assets/images/bed.png"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [12.59106082708855, 47.80419556680706]
+        "coordinates": [12.702987816654447, 47.80006644044843]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "type": "Accomodation",
-        "message": "Alpin-Gästehaus",
-        "url": "https://alpin-gaestehaus.de",
-        "phone": "+49 8662 8397",
+        "message": "Herbstbauernhof - Hammer/Hachau",
+        "distance": "15 Minuten Fußweg",
+        "url": "https://www.herbstbauernhof.de",
+        "phone": "+49 8662 493987",
         "iconSize": [40, 40],
         "icon": "/assets/images/bed.png"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [12.591496113482362, 47.80998765763203]
+        "coordinates": [12.693760004800625, 47.8078624554738]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "type": "Accomodation",
-        "message": "Hotel Mariandl",
-        "url": "https://hotel-mariandl.de",
-        "phone": "+49 8662 8495",
+        "message": "Stöcklhof – Frauenstätt",
+        "distance": "2 Minuten mit dem Auto",
+        "url": "https://www.stoecklhof.com/",
+        "phone": "+49 8662 9628",
         "iconSize": [40, 40],
         "icon": "/assets/images/bed.png"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [12.589717869303932, 47.801027192477896]
+        "coordinates": [12.693760004800625, 47.8078624554738]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "type": "Accomodation",
-        "message": "Gästehaus Gehmacher",
-        "url": "https://beimbauern.de",
-        "phone": "+49 8662 3329",
+        "message": "Bergmair Alpenhotels – Inzell",
+        "distance": "5-7 Minuten mit dem Auto",
+        "url": "https://www.bergmayr-alpenhotel.de/",
+        "phone": "+49 8665 6770",
         "iconSize": [40, 40],
         "icon": "/assets/images/bed.png"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [12.59523959639717, 47.80457560948969]
+        "coordinates": [12.750842901755135, 47.76804233695128]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "type": "Accomodation",
-        "message": "Gästehaus Sonnenhof",
-        "url": "https://sonnenhof-dangl.de",
-        "phone": "+49 8662 661156",
+        "message": "Gasthof Kienberg – Inzell",
+        "distance": "5-7 Minuten mit dem Auto",
+        "url": "http://www.gasthof-kienberg.de/",
+        "phone": "+49 8665 223",
         "iconSize": [40, 40],
         "icon": "/assets/images/bed.png"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [12.593819453961373, 47.80443136687273]
+        "coordinates": [12.74767436225111, 47.76233035036791]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "type": "Accomodation",
-        "message": "Gasthof Alpenblick Holzhausen",
-        "url": "https://gasthofalpenblick.de",
-        "phone": "+49 151 16687835",
+        "message": "Gasthaus Edelweiß – Siegsdorf",
+        "distance": "5-7 Minuten mit dem Auto",
+        "url": "http://www.gasthof-edelweiss.de/",
+        "phone": "+49 8662 9296",
         "iconSize": [40, 40],
         "icon": "/assets/images/bed.png"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [12.573725082797829, 47.83065254895307]
+        "coordinates": [12.647260919398887, 47.82318060771843]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Accomodation",
+        "message": "Alte Post - Siegsdorf",
+        "distance": "5-7 Minuten mit dem Auto",
+        "url": "https://altepostsiegsdorf.de/",
+        "phone": "+49 8662 6646 0900",
+        "iconSize": [40, 40],
+        "icon": "/assets/images/bed.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.641254460721647, 47.82203039911894]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "message": "Hochzeit im Garten des Hammerwirts",
+        "url": "https://www.der-hammerwirt.de/",
+        "booking": "https://direct-book.com/properties/hotelgasthofhoertererdirect?locale=de&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=EUR&checkInDate=2022-09-24&checkOutDate=2022-09-25&trackPage=no&promocode=MV2022",
+        "phone": "+49 8662 6670",
+        "iconSize": [60, 60],
+        "icon": "/assets/images/wedding.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.704796, 47.80159352358]
       }
     }
   ]

@@ -23,9 +23,10 @@ const Index = () => {
         <div className="mx-auto max-w-screen-md">
           <h2>Ablauf</h2>
           <ol>
-            <li>13:30 - Freie Trauung am Schellenberg hinterm Schusterhof</li>
+            <li>14:00 - Freie Trauung im Garten beim Hammerwirt</li>
             <li>15:00 - Kaffee und Kuchen</li>
             <li>18:30 - Abendessen</li>
+            <li>Party!!!</li>
           </ol>
         </div>
       </div>
@@ -41,25 +42,7 @@ const Index = () => {
               />{' '}
               Location
             </h2>
-            <p>Adresse: Schellenbergstraße 3, 83346 Bergen</p>
-          </div>
-          <div className="my-5">
-            <h2 className="flex-header">
-              <img
-                src="/assets/images/parking.png"
-                className="icon-header mr-3"
-                alt="Icon"
-              />{' '}
-              Parkplatz in der Nähe
-            </h2>
-            <p>
-              Da beim Schusterhof der Parkplatz begrenzt ist, bitten wir euch,
-              die Autos unten beim Friedhof stehen zu lassen und die letzten
-              Meter zu Fuß hinauf zu gehen.
-              <br />
-              <br />
-              Adresse: Achenweg 31, 83346 Bergen
-            </p>
+            <p>Adresse: Schmiedstraße 1, 83313 Siegsdorf</p>
           </div>
           <div className="my-5">
             <h2 className="flex-header">
@@ -70,15 +53,25 @@ const Index = () => {
               />{' '}
               Unterkünfte
             </h2>
-            <p>
+            <p className="mb-4">
               Da das Chiemgau zu dieser Zeit sehr gefragt ist, ist es leider
-              nicht möglich alle Gäste an einem Ort unterzubringen. Wir bitten
-              euch deshalb selbst für eine Unterkunft zu sorgen. Anbei haben wir
-              für euch ein paar Hotels/Pensionen in unmittelbarer Nähe
-              zusammengetragen.
+              nicht möglich alle Gäste an einem Ort unterzubringen. Wir haben 20
+              Zimmer im Hammerwirt geblockt.
+              <br />
+              <br />
+              Bitte einfach mit folgendem Link buchen:&nbsp;
+              <a href="https://direct-book.com/properties/hotelgasthofhoertererdirect?locale=de&items%5b0%5d%5badults%5d=2&items%5b0%5d%5bchildren%5d=0&items%5b0%5d%5binfants%5d=0&currency=EUR&checkInDate=2022-09-24&checkOutDate=2022-09-25&trackPage=yes&promocode=MV2022">
+                zur Buchung
+              </a>
+            </p>
+            <p>
+              Für alle die im Hammerwirt nicht mehr Platz finden, haben wir für
+              ein paar Hotels/Pensionen in unmittelbarer Nähe zusammengetragen.
             </p>
 
-            <h3 className="mt-8">Übernachtungsmöglichkeiten in Bergen:</h3>
+            <h3 className="mt-8">
+              Übernachtungsmöglichkeiten in der Umgebung:
+            </h3>
             <ul
               className="grid grid-cols-1 gap-4 md:grid-cols-2"
               style={{ margin: '1rem 0 4rem 0' }}
@@ -88,6 +81,11 @@ const Index = () => {
                   <li key={acc.message} className="md:ml-5">
                     <div>
                       <div>{acc.message}</div>
+                      {acc.distance && (
+                        <div>
+                          <small>{acc.distance}</small>
+                        </div>
+                      )}
                       <div>
                         <a href={acc.url}>{acc.url}</a>
                       </div>
@@ -99,6 +97,10 @@ const Index = () => {
                   </li>
                 ))}
             </ul>
+            <div>
+              Gebt uns bitte Bescheid falls ihr ein Taxi zur Unterkunft
+              benötigt.
+            </div>
           </div>
         </div>
       </div>
@@ -122,7 +124,7 @@ const Index = () => {
           <div>
             <strong className="gold header-alt">Meldet&apos;s enk</strong>
             <p>
-              Bitte gebt uns bis zum <strong>01.07.2022</strong> Bescheid ob ihr
+              Bitte gebt uns bis zum <strong>31.07.2022</strong> Bescheid ob ihr
               diesen Tag mit uns feiern könnt. Wir freuen uns auf euch!
             </p>
           </div>

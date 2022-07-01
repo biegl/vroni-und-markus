@@ -1,5 +1,5 @@
 {
-  "name": "next-js-boilerplate",
+  "name": "vroni-und-markus",
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@types/mapbox-gl": "^2.6.3",
-    "actionsheet-react": "^1.0.14",
     "mapbox-gl": "^2.7.1",
     "next": "^12.1.0",
     "next-seo": "^5.2.0",

@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-import ActionSheet, { ActionSheetRef } from 'actionsheet-react';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 
@@ -34,7 +33,6 @@ function openMaps(coordinates: any) {
 }
 
 const Map = () => {
-  const actionSheet = useRef<ActionSheetRef>();
   const mapContainer = useRef(null);
   const map: any = useRef(null);
   const [lng, setLng] = useState(initialLongitude);
@@ -88,7 +86,8 @@ const Map = () => {
 
       el.addEventListener('click', () => {
         setSelectedMarker(marker);
-        actionSheet.current?.open();
+        const url = marker.properties.booking || marker.properties.url;
+        window.open(url);
         document.body.style.overflow = 'hidden';
       });
 
@@ -144,79 +143,6 @@ const Map = () => {
           </button>
         )}
       </div>
-      <ActionSheet
-        ref={actionSheet}
-        touchEnable={false}
-        mouseEnable={false}
-        sheetTransition="transform 0.3s ease-in-out 0s"
-        onClose={handleActionSheetClosing}
-        sheetStyle={{
-          display: 'flex',
-          justifyContent: 'center',
-          maxHeight: '80vh',
-        }}
-      >
-        <button
-          className="absolute right-5 top-3 h-10 w-10 text-center"
-          onClick={() => {
-            actionSheet.current?.close();
-            handleActionSheetClosing();
-          }}
-          title="Schließen"
-        >
-          x
-        </button>
-        {selectedMarker && (
-          <div className="p-5" style={style.content}>
-            <div className="flex">
-              <img
-                src={selectedMarker.properties.icon}
-                className="bc-gold mr-3 h-14 w-14 rounded-full border-4"
-                alt="Icon"
-              />
-              <h3>{selectedMarker.properties.message}</h3>
-            </div>
-            <div className="mt-3">
-              {selectedMarker.properties.url && (
-                <div>
-                  Website:{' '}
-                  <a
-                    href={selectedMarker.properties.url}
-                    target={'_blank'}
-                    rel="noreferrer"
-                  >
-                    {selectedMarker.properties.url}
-                  </a>
-                </div>
-              )}
-              {selectedMarker.properties.phone && (
-                <div>
-                  Telefon:{' '}
-                  <a
-                    href={`tel:${selectedMarker.properties.phone}`}
-                    target={'_blank'}
-                    rel="noreferrer"
-                  >
-                    {selectedMarker.properties.phone}
-                  </a>
-                </div>
-              )}
-              {selectedMarker.geometry.coordinates && (
-                <div className="mt-5 flex justify-center">
-                  <button
-                    className="bg-gold mr-2 mb-2 rounded-lg px-5 py-2.5 text-sm font-medium text-white hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 dark:focus:ring-yellow-900"
-                    onClick={() => {
-                      openMaps(selectedMarker.geometry.coordinates);
-                    }}
-                  >
-                    Maps öffnen
-                  </button>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-      </ActionSheet>
     </div>
   );
 };

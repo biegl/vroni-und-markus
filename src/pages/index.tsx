@@ -63,6 +63,8 @@ const Index = () => {
               <a href="https://direct-book.com/properties/hotelgasthofhoertererdirect?locale=de&items%5b0%5d%5badults%5d=2&items%5b0%5d%5bchildren%5d=0&items%5b0%5d%5binfants%5d=0&currency=EUR&checkInDate=2022-09-24&checkOutDate=2022-09-25&trackPage=yes&promocode=MV2022">
                 zur Buchung
               </a>
+              <br />
+              Der Buchungscode ist nur bis zum 15.7. gültig!
             </p>
             <p>
               Für alle die im Hammerwirt nicht mehr Platz finden, haben wir für

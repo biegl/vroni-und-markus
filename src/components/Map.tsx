@@ -11,8 +11,8 @@ mapboxgl.accessToken =
 
 const initialZoom =
   typeof window !== 'undefined' && window.document.body.clientWidth > 767
-    ? 12
-    : 11;
+    ? 11
+    : 10;
 
 const initialLongitude = 12.704796;
 const initialLatitude = 47.80159352358;

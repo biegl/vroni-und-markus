@@ -9,12 +9,6 @@ import styles from './Map.module.css';
 mapboxgl.accessToken =
   'pk.eyJ1IjoiYmllZ2wiLCJhIjoiY2wxNHdhZDBvMHU5djNkcGR6djgwdHl5aSJ9.Zv3cstywn-xt5qbcifYlfw';
 
-const style = {
-  content: {
-    maxWidth: '400px',
-  },
-};
-
 const initialZoom =
   typeof window !== 'undefined' && window.document.body.clientWidth > 767
     ? 12
@@ -23,22 +17,12 @@ const initialZoom =
 const initialLongitude = 12.704796;
 const initialLatitude = 47.80159352358;
 
-function openMaps(coordinates: any) {
-  const isIOS = navigator.userAgent.match(/(iPad|iPhone|iPod)/i);
-  const protocol = isIOS ? 'maps' : 'https';
-
-  window.open(
-    `${protocol}://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=${coordinates[1]},${coordinates[0]}`
-  );
-}
-
 const Map = () => {
   const mapContainer = useRef(null);
   const map: any = useRef(null);
   const [lng, setLng] = useState(initialLongitude);
   const [lat, setLat] = useState(initialLatitude);
   const [zoom, setZoom] = useState(initialZoom);
-  const [selectedMarker, setSelectedMarker] = useState<any>(null);
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
@@ -85,7 +69,6 @@ const Map = () => {
       el.style.backgroundImage = `url(${marker.properties.icon})`;
 
       el.addEventListener('click', () => {
-        setSelectedMarker(marker);
         const url = marker.properties.booking || marker.properties.url;
         window.open(url);
         document.body.style.overflow = 'hidden';
@@ -120,12 +103,7 @@ const Map = () => {
     map.current.setZoom(initialZoom);
     setLng(initialLongitude);
     setLat(initialLatitude);
-    setSelectedMarker(null);
     setZoom(initialZoom);
-  }
-
-  function handleActionSheetClosing() {
-    document.body.style.overflow = 'auto';
   }
 
   const needsResetButton =

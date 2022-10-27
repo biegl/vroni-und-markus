@@ -82,6 +82,12 @@ a:hover {
   overflow: hidden;
 
 }
+
 .page-footer-image img {
   max-width: none;
+}
+
+.image-gallery-thumbnail-inner {
+  overflow: hidden;
+  max-height: 60px;
 }

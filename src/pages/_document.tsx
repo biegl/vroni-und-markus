@@ -7,7 +7,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang={AppConfig.locale}>
-        <Head />
+        <Head>
+          <meta name="referrer" content="no-referrer" />
+        </Head>
         <body>
           <Main />
           <NextScript />

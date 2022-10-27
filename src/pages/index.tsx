@@ -1,15 +1,16 @@
 import Header from '@/components/Header';
-import Map from '@/components/Map';
+import Slideshow from '@/components/Slideshow';
 import { Meta } from '@/layout/Meta';
+import { GalleryService } from '@/services/galleryService';
 import { Main } from '@/templates/Main';
 
-import geojson from '../data/geojson.json';
+// import geojson from '../data/geojson.json';
 
-const accomodations = geojson.features
-  .filter((data) => data.properties.type === 'Accomodation')
-  .map((el) => el.properties);
+// const accomodations = geojson.features
+//   .filter((data) => data.properties.type === 'Accomodation')
+//   .map((el) => el.properties);
 
-const Index = () => {
+const Index = (props: any) => {
   return (
     <Main
       meta={
@@ -19,7 +20,7 @@ const Index = () => {
       <div className="mx-auto max-w-screen-md">
         <Header />
       </div>
-      <div className="section bg-white p-5">
+      {/* <div className="section bg-white p-5">
         <div className="mx-auto max-w-screen-md">
           <h2>Ablauf</h2>
           <ol>
@@ -105,35 +106,48 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div>
-        <div className="flex h-96 items-center justify-center">
+        <div className="flex items-center justify-center bg-white">
           <div className="max-w-screen-md text-center">
-            <h2>Fotos</h2>
-            <p>Gibt&apos;s dann nach der Hochzeit! ;)</p>
+            <div className="py-10">
+              <strong className="gold header-alt">Danke, geil wors!</strong>
+              <p></p>
+            </div>
+            <Slideshow photos={props.photos} />
+            <div className="py-10">
+              <a
+                href="https://photos.app.goo.gl/S7Q719AnUGCv5GYy9"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Fotos herunterladen
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <footer className="grid grid-cols-1 md:grid-cols-2">
-        <div className="page-footer-image bg-white">
+      <footer className="">
+        {/* <div className="page-footer-image bg-white">
           <img
             src="/assets/images/footer.jpg"
             style={{ height: '100%' }}
             alt="Brautpaar"
           />
-        </div>
-        <div className="mx-auto max-w-screen-md bg-white p-5">
-          <div>
-            <strong className="gold header-alt">Meldet&apos;s enk</strong>
-            <p>
-              Bitte gebt uns bis zum <strong>31.07.2022</strong> Bescheid ob ihr
-              diesen Tag mit uns feiern könnt. Wir freuen uns auf euch!
-            </p>
-          </div>
-        </div>
+        </div> */}
       </footer>
     </Main>
   );
 };
+
+export async function getServerSideProps({ res }: any) {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  );
+
+  const photos = await new GalleryService('S7Q719AnUGCv5GYy9').getPhotos();
+  return { props: { photos } };
+}
 
 export default Index;
